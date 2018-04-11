@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+before_install:
+  - pip install -U pip
+install:
+  - pip install -r requirements.txt
+  - npm install serverless
+  - npm install
+script:
+  - sls deploy
