@@ -1,11 +1,13 @@
 language: python
 python:
-  - "3.6"
+  - "3.6.3"
 node_js:
   - node
 cache:
   directories:
     - node_modules
+    - $HOME/virtualenv/python3.6.3/lib/python3.6/site-packages
+    - $HOME/.cache/pip
 before_install:
   - pip install -U pip
 install:
